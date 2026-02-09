@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    --color1: rgb(251, 79, 0);
+    --fondo1: rgba(0, 0, 0, 0.259);
+    scroll-behavior: smooth;
+}
+
+.fondo{
+    height: 100dvh;
+    width: 100dvw;
+    top: 0;
+    position: fixed;
+    background-image: url(por\ order.webp);
+    z-index: -1;
+    background-size:cover;
+    background-position: center;
+    filter: brightness(50%); /* 100% = normal, <100% = más oscuro */
+}
+
+
+/*---------------NAV--------------*/
+
+.nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    box-shadow: 0 0  15px rgba(0, 0, 0, 0.453);
+    background-color: rgba(255, 231, 231, 0.096);
+    position: fixed;
+    width: 100dvw;
+    z-index: 10;
+}
+
+.nav__contenedor_botones{
+    display: flex;
+    gap: 16px;
+    margin-right: 25px;
+}
+
+
+.nav h1{
+    color: var(--color1);
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 0 0 10px  rgb(0, 0, 0);
+    margin-left: 20px;
+}
+
+/*--------------Contenedor titulo---------------*/
+
+.contenedor_titulo{
+    background-color: var(--fondo1);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contenedor_titulo h1{
+    background-color: var(--color1);
+    text-align: center;
+    font-size: 130px;
+}
+
+.contenedor_titulo h2{
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: capitalize;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/*----------Contenedor-----------*/
+
+.contenedor{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.contenedor__title{
+    color: var(--color1);
+    font-size: 40px;
+}
+
+
+/*----------Menu-----------*/
+
+.contenedor__menu{
+    width: 100%;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(290px,1fr));
+    gap: 20px;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.menu__item {
+    background-color: rgba(255, 231, 231, 0.096);
+    border-radius: 20px;
+    box-shadow: 0 0  10px rgba(0, 0, 0, 0.247);
+    animation: aparecer;
+    animation-timeline: view();
+    animation-range-start: 5%;
+    animation-range-end: 15%;
+    animation-fill-mode: both;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu__item div{
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    overflow:hidden;
+}
+
+.menu__item h2{
+    width: 80%;
+    text-align: center;
+    color: var(--color1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 26px;
+}
+
+.comida{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+
+/*---------------Animaciones------------------*/
+
+
+@keyframes aparecer {
+    from{
+        opacity: 10%;
+        scale: 10%;
+    }
+    to{
+        scale: 100%;
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+/* BOTONES */
+.botones {
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  color:#fff;
+  user-select: none;
+  border: none;
+  min-width: 145px;
+  border: 1px solid white;
+  border-radius: 20px;
+  height: 35px;
+  text-decoration: none;
+  display: grid;
+  place-content:center ;
+}
+
+
+
+
