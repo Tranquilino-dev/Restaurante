@@ -4,7 +4,7 @@
     box-sizing: border-box;
     color: black;
     --color1: rgb(251, 79, 0);
-    --fondo1: rgba(0, 0, 0, 0.259);
+    --opacidad1: rgba(141, 127, 127, 0.456);
     scroll-behavior: smooth;
 }
 
@@ -17,7 +17,7 @@
     z-index: -1;
     background-size:cover;
     background-position: center;
-    filter: brightness(50%); /* 100% = normal, <100% = más oscuro */
+    filter: brightness(30%); /* 100% = normal, <100% = más oscuro */
 }
 
 
@@ -54,7 +54,6 @@
 /*--------------Contenedor titulo---------------*/
 
 .contenedor_titulo{
-    background-color: var(--fondo1);
     height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -109,9 +108,9 @@
 }
 
 .menu__item {
-    background-color: rgba(255, 231, 231, 0.096);
+    background-color: var(--opacidad1);
     border-radius: 20px;
-    box-shadow: 0 0  10px rgba(0, 0, 0, 0.247);
+    box-shadow: 0 0  10px rgba(23, 23, 23, 0.207);
     animation: aparecer;
     animation-timeline: view();
     animation-range-start: 5%;
