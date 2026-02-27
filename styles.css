@@ -5,19 +5,21 @@
     color: black;
     --color1: rgb(251, 79, 0);
     --opacidad1: rgba(141, 127, 127, 0.456);
+    --opacidad2: rgba(255, 231, 231, 0.096);
+    --color2: #fff;
     scroll-behavior: smooth;
 }
 
 .fondo{
-    height: 100dvh;
-    width: 100dvw;
+    height: 100%;
+    width: 100%;
     top: 0;
     position: fixed;
     background-image: url(img2.wallspic.com-pizza-cocina_italiana-salami-cocina-restaurante-1920x1200.jpg);
     z-index: -1;
     background-size:cover;
     background-position: center;
-    filter: brightness(30%); /* 100% = normal, <100% = más oscuro */
+    filter: brightness(40%); /* 100% = normal, <100% = más oscuro */
 }
 
 
@@ -32,7 +34,7 @@
     box-shadow: 0 0  15px rgba(0, 0, 0, 0.453);
     background-color: rgba(255, 231, 231, 0.096);
     position: fixed;
-    width: 100dvw;
+    width: 100%;
     z-index: 10;
 }
 
@@ -54,6 +56,7 @@
 /*--------------Contenedor titulo---------------*/
 
 .contenedor_titulo{
+    width: 100%;
     height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -62,6 +65,7 @@
 }
 
 .contenedor_titulo h1{
+    width: 100%;
     background-color: var(--color1);
     text-align: center;
     font-size: 130px;
@@ -102,13 +106,13 @@
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(auto-fill, minmax(290px,1fr));
-    gap: 20px;
+    gap: 30px;
     justify-content: space-around;
     padding: 0 20px;
 }
 
 .menu__item {
-    background-color: var(--opacidad1);
+    background-color: var(--opacidad2);
     border-radius: 20px;
     box-shadow: 0 0  10px rgba(23, 23, 23, 0.207);
     animation: aparecer;
@@ -124,7 +128,7 @@
     gap: 10px;
 }
 
-.menu__item div{
+.menu__item .img{
     width: 70%;
     height: 70%;
     border-radius: 20px;
@@ -186,6 +190,50 @@
   place-content:center ;
 }
 
+@media screen and (max-width: 760px) {
+    .botones{
+        font-size: 14px;
+        min-width: 96px;
+    }
 
+    .contenedor_titulo h1{
+        font-size: 100px;
+    }
 
+    .nav h1{
+        font-size: 26px;
+    }
+}
 
+@media screen and (max-width:510px) {
+    .contenedor_titulo h1{
+        font-size: 70px;
+    }
+    .nav h1{
+        font-size: 25px;
+    }
+    .nav__contenedor_botones .botones{
+        width: 100px;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .contenedor_titulo h1{
+        font-size: 50px;
+        width: 100%;
+    }
+
+    .contenedor__menu{
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    }
+
+    .menu__item{
+        height: 200px;
+    }
+
+    .menu__item h2{
+        font-size: 20px;
+    }
+
+}
